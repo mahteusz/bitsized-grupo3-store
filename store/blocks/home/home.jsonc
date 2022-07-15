@@ -14,25 +14,7 @@
       "rich-text#link"
       // "newsletter"
     ]
-  },
-
-  // "list-context.image-list#demo": {
-  //   "children": ["slider-layout#demo-images"],
-  //   "props": {
-  //     "height": 570,
-  //     "preload": true,
-  //     "images": [
-  //       {
-  //         "image": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
-  //         "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
-  //       },
-  //       {
-  //         "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
-  //         "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
-  //       }
-  //     ]
-  //   }
-  // }, 
+  }, 
 
   "info-card#use-seus-pontos": {
     "props": {
