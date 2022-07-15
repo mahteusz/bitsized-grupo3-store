@@ -1,0 +1,108 @@
+{
+  "store.home": {
+    "blocks": [
+      "rich-text#points-title",
+      "info-card#use-seus-pontos",
+      /* You can make references to blocks defined in other files.
+       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
+      // "flex-layout.row#deals",
+      "__fold__",
+      // "rich-text#shelf-title",
+      "flex-layout.row#shelf",
+      "info-card#home",
+      "rich-text#question",
+      "rich-text#link"
+      // "newsletter"
+    ]
+  },
+
+  // "list-context.image-list#demo": {
+  //   "children": ["slider-layout#demo-images"],
+  //   "props": {
+  //     "height": 570,
+  //     "preload": true,
+  //     "images": [
+  //       {
+  //         "image": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
+  //         "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
+  //       },
+  //       {
+  //         "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
+  //         "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+  //       }
+  //     ]
+  //   }
+  // }, 
+
+  "info-card#use-seus-pontos": {
+    "props": {
+      "id": "info-card-usar-pontos",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "imageUrl": "https://st4.depositphotos.com/12985886/39157/i/600/depositphotos_391577698-stock-photo-horizontal-crop-cheerful-woman-outstretched.jpg",
+      "headline": "",
+      "callToActionText": "USAR MEUS PONTOS AGORA",
+      "callToActionUrl": "/eletronicos",
+      "blockClass": "info-card-usar-pontos",
+      "textAlignment": "center"
+    }
+  },
+
+  "rich-text#points-title": {
+    "props": {
+      "text": "# Você tem 789 pontos",
+      "blockClass": "shelfTitle",
+      "textAlignment": "center"
+    }
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "info-card#home": {
+    "props": {
+      "id": "info-card-home",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Verifique seu saldo",
+      "callToActionText": "CONSULTAR MEUS PONTOS",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-home",
+      "textAlignment": "center"
+    }
+  },
+
+  "rich-text#question": {
+    "props": {
+      "text": "**Obriada pela visita.\nVolte sempre**",
+      "blockClass": "question"
+    }
+  },
+
+  "rich-text#link": {
+    "props": {
+      "text": "\n\nwww.maria.com.br",
+      "blockClass": "link"
+    }
+  }
+}
