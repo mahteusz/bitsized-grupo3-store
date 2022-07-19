@@ -60,6 +60,7 @@
       "flex-layout.col#spacer",
       "search-bar",
       "locale-switcher",
+      "pointsexample",
       "login",
       "minicart.v2"
     ]

@@ -1,8 +1,7 @@
 {
   "store.home": {
     "blocks": [
-      "rich-text#points-title",
-      "info-card#use-seus-pontos",
+      "info-card#use-seus-pontos",      
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       // "flex-layout.row#deals",
@@ -14,7 +13,7 @@
       "rich-text#link"
       // "newsletter"
     ]
-  }, 
+  },   
 
   "info-card#use-seus-pontos": {
     "props": {
@@ -29,14 +28,7 @@
       "textAlignment": "center"
     }
   },
-
-  "rich-text#points-title": {
-    "props": {
-      "text": "# Você tem 789 pontos",
-      "blockClass": "shelfTitle",
-      "textAlignment": "center"
-    }
-  },
+  
   "flex-layout.row#shelf": {
     "children": ["list-context.product-list#demo1"]
   },
