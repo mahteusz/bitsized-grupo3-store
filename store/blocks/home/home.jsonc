@@ -1,7 +1,6 @@
 {
   "store.home": {
     "blocks": [
-      "rich-text#points-title",
       "info-card#use-seus-pontos",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
@@ -14,8 +13,7 @@
       "rich-text#link"
       // "newsletter"
     ]
-  }, 
-
+  },
   "info-card#use-seus-pontos": {
     "props": {
       "id": "info-card-usar-pontos",
@@ -29,20 +27,18 @@
       "textAlignment": "center"
     }
   },
-
-  "rich-text#points-title": {
-    "props": {
-      "text": "# Você tem 789 pontos",
-      "blockClass": "shelfTitle",
-      "textAlignment": "center"
-    }
-  },
   "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
+    "children": [
+      "list-context.product-list#demo1"
+    ]
   },
   "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
     "props": {
       "orderBy": "OrderByTopSaleDESC"
     }
@@ -59,28 +55,25 @@
       "blockClass": "shelf"
     }
   },
-
   "info-card#home": {
     "props": {
       "id": "info-card-home",
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Verifique seu saldo",
-      "callToActionText": "CONSULTAR MEUS PONTOS",
-      "callToActionUrl": "/sale/d",
+      "headline": "Os melhores acessórios para seu dia",
+      "callToActionText": "Acessórios",
+      "callToActionUrl": "/acessorios",
       "blockClass": "info-card-home",
       "textAlignment": "center"
     }
   },
-
   "rich-text#question": {
     "props": {
-      "text": "**Obriada pela visita.\nVolte sempre**",
+      "text": "**Obrigada pela visita.\nVolte sempre**",
       "blockClass": "question"
     }
   },
-
   "rich-text#link": {
     "props": {
       "text": "\n\nwww.maria.com.br",

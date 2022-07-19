@@ -1,9 +1,15 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header.full": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header-layout.desktop": {
     "children": [
@@ -12,14 +18,14 @@
       "sticky-layout#4-desktop"
     ]
   },
-
   "flex-layout.row#1-desktop": {
-    "children": ["telemarketing"],
+    "children": [
+      "telemarketing"
+    ],
     "props": {
       "fullWidth": true
     }
   },
-  
   "flex-layout.row#3-desktop": {
     "props": {
       "blockClass": "menu-link",
@@ -43,7 +49,9 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#4-desktop"]
+    "children": [
+      "flex-layout.row#4-desktop"
+    ]
   },
   "flex-layout.row#4-desktop": {
     "props": {
@@ -60,6 +68,7 @@
       "flex-layout.col#spacer",
       "search-bar",
       "locale-switcher",
+      "rich-text#points-title-login",
       "login",
       "minicart.v2"
     ]
@@ -68,14 +77,49 @@
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["logo#desktop"]
+    "children": [
+      "logo#desktop"
+    ]
   },
   "flex-layout.col#category-menu": {
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["vtex.menu@2.x:menu#category-menu"]
+    "children": [
+      "vtex.menu@2.x:menu#category-menu"
+    ]
   },
+
+  // usar condicional, para o caso do usuário estar logado, ou não
+  "rich-text#points-title-login": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "`userId.$vtex.login`",
+          "arguments": null
+        }
+      ],
+      "Then": "rich-text#points-title",
+      "Else": "rich-text#points-login"
+    }
+  },
+
+  "rich-text#points-title": {
+    "props": {
+      "text": "**Você tem 789 pontos**",
+      "blockClass": "shelfTitle",
+      "textAlignment": "left"
+    }
+  },
+
+  "rich-text#points-login": {
+    "props": {
+      "text": "**Faça login para saber seus pontos**",
+      "blockClass": "shelfTitle",
+      "textAlignment": "left"
+    }
+  },
+
   "logo#desktop": {
     "props": {
       "title": "Logo",
@@ -86,16 +130,21 @@
     }
   },
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
+    "children": [
+      "sticky-layout#1-mobile"
+    ]
   },
   "sticky-layout#1-mobile": {
-    "children": ["flex-layout.row#1-mobile"]
+    "children": [
+      "flex-layout.row#1-mobile"
+    ]
   },
   "flex-layout.row#1-mobile": {
     "children": [
       "drawer",
       "logo#mobile",
       "flex-layout.col#spacer",
+      "rich-text#points-title-login",
       "login",
       "minicart.v2"
     ],
@@ -107,9 +156,10 @@
     }
   },
   "drawer": {
-    "children": ["menu#drawer"]
+    "children": [
+      "menu#drawer"
+    ]
   },
-
   "menu#drawer": {
     "children": [
       "menu-item#category-apparel",
@@ -120,7 +170,6 @@
       "orientation": "vertical"
     }
   },
-
   "logo#mobile": {
     "props": {
       "title": "Logo",
