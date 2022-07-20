@@ -89,7 +89,6 @@
       "vtex.menu@2.x:menu#category-menu"
     ]
   },
-
   // usar condicional, para o caso do usuário estar logado, ou não
   "rich-text#points-title-login": {
     "props": {
@@ -103,7 +102,6 @@
       "Else": "rich-text#points-login"
     }
   },
-
   "rich-text#points-title": {
     "props": {
       "text": "**Você tem 789 pontos**",
@@ -111,7 +109,6 @@
       "textAlignment": "left"
     }
   },
-
   "rich-text#points-login": {
     "props": {
       "text": "**Faça login para saber seus pontos**",
@@ -119,7 +116,6 @@
       "textAlignment": "left"
     }
   },
-
   "logo#desktop": {
     "props": {
       "title": "Logo",
@@ -163,7 +159,6 @@
   "menu#drawer": {
     "children": [
       "menu-item#category-apparel",
-      "menu-item#category-home",
       "menu-item#more"
     ],
     "props": {

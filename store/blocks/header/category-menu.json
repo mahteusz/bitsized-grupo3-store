@@ -40,7 +40,7 @@
     },
     "children": [
       "menu-item#category-apparel-clothing",
-      "menu-item#category-apparel-accessories"
+      "menu-item#category-eletronicos"
     ]
   },
   "menu-item#category-apparel-clothing": {
@@ -54,13 +54,13 @@
         "href": "/acessorios",
         "noFollow": false,
         "tagTitle": "Clothing",
-        "text": "acessorios"
+        "text": "Acessórios"
       }
     }
   },
-  "menu-item#category-apparel-accessories": {
+  "menu-item#category-eletronicos": {
     "props": {
-      "id": "menu-item-category-apparel-accessories",
+      "id": "menu-item-category-eletronicos",
       "type": "custom",
       "iconId": null,
       "highlight": false,
@@ -68,7 +68,7 @@
         "type": "internal",
         "href": "/eletronicos",
         "noFollow": false,
-        "tagTitle": "Accessories",
+        "tagTitle": "Eletrônicos",
         "text": "Eletrônicos"
       }
     }
@@ -88,21 +88,7 @@
       }
     }
   },
-  "menu-item#category-home": {
-    "props": {
-      "id": "menu-item-category-home",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/home---decor/",
-        "noFollow": false,
-        "tagTitle": "Home & Decor",
-        "text": "Home & Decor"
-      }
-    }
-  },
+
   "menu-item#more": {
     "props": {
       "id": "menu-item-custom-sale",
@@ -164,8 +150,8 @@
         "type": "internal",
         "href": "/about-us",
         "noFollow": true,
-        "tagTitle": "About us",
-        "text": "About us"
+        "tagTitle": "Sobre nós",
+        "text": "Sobre nós"
       }
     }
   },
@@ -177,10 +163,10 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/faq",
+        "href": "/duvidas",
         "noFollow": true,
-        "tagTitle": "FAQ",
-        "text": "FAQ"
+        "tagTitle": "Dúvidas",
+        "text": "Dúvidas"
       }
     }
   },
