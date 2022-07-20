@@ -14,13 +14,12 @@
       // "newsletter"
     ]
   },
-
   "info-card#use-seus-pontos": {
     "props": {
       "id": "info-card-usar-pontos",
       "isFullModeStyle": true,
       "textPosition": "center",
-      "imageUrl": "https://st4.depositphotos.com/12985886/39157/i/600/depositphotos_391577698-stock-photo-horizontal-crop-cheerful-woman-outstretched.jpg",
+      "imageUrl": "assets/bannerhome.jpg",
       "headline": "",
       "callToActionText": "USAR MEUS PONTOS AGORA",
       "callToActionUrl": "/eletronicos",
@@ -28,7 +27,6 @@
       "textAlignment": "center"
     }
   },
-
   "flex-layout.row#shelf": {
     "children": [
       "list-context.product-list#demo1"
@@ -62,7 +60,7 @@
       "id": "info-card-home",
       "isFullModeStyle": false,
       "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "imageUrl": "assets/acessorios.jpg",
       "headline": "Os melhores acessórios para seu dia",
       "callToActionText": "Acessórios",
       "callToActionUrl": "/acessorios",

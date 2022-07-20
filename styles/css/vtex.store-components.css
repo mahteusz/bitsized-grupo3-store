@@ -7,9 +7,9 @@
 }
 
 .infoCardContainer--info-card-home {
-  max-width: 1520px;  
+  max-width: 1520px;
   margin: 0 auto;
-  background-color: #bbe3bb;
+  background-color: darksalmon;
   padding: 0px;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .infoCardContainer--info-card-usar-pontos {
-  max-width: 1520px;  
+  max-width: 1520px;
   min-height: 500px;
   margin: 0 auto;
   padding: 0px;
