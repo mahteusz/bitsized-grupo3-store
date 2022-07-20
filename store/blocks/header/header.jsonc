@@ -68,7 +68,7 @@
       "flex-layout.col#spacer",
       "search-bar",
       "locale-switcher",
-      "rich-text#points-title-login",
+      "pointsexample",
       "login",
       "minicart.v2"
     ]
