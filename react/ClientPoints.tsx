@@ -1,37 +1,55 @@
 import React, {useState, useEffect} from "react";
-import { useCssHandles } from 'vtex.css-handles'
+//import { useCssHandles } from 'vtex.css-handles'
+import { useQuery } from 'react-apollo';
+import POINTS_BY_CLIENT_ID from './graphql/getPointsByClientId.graphql'
 
-const CSS_HANLDES = ['container', 'points'];
+//const CSS_HANDLES = ['container', 'points'];
 
-interface UserData{
-    userId:string,
-    user:string,
-    userType:string
-
-};
+interface UserSessionData {
+    id:string,
+    email:string
+}
 
 const ClientPoints: StorefrontFunctionComponent = () => {
-    const [userData, setUserData] = useState<UserData | null>(null)
-    const handles = useCssHandles(CSS_HANLDES)
-    
+    const [userSessionData, setUserSessionData] = useState<UserSessionData | null>(null)
+    const [userPoints, setUserPoints] = useState<number>(0)
+    //const handles = useCssHandles(CSS_HANDLES)
+
+    const pointsByClientId = useQuery(POINTS_BY_CLIENT_ID, {
+        variables: {
+            clientId: userSessionData?.id
+        }
+    })
+
+    const fetchDataSession = async () => {
+        fetch('/api/sessions?items=*')
+        .then(res => res.json())
+        .then(res => {
+            const sessionUserData = {
+                id: res.namespaces.profile.id?.value,
+                email: res.namespaces.profile.email?.value
+            }
+            setUserSessionData(sessionUserData)
+        })
+    }
 
     useEffect( () => {
-        const fetchData = async () => {
-            const res = await fetch('https://vtexid.vtex.com.br/api/vtexid/pub/authenticated/user')
-            const toJson = await res.json()
-            setUserData(toJson)
-            console.log(toJson) 
+        if(!userSessionData){
+            fetchDataSession()
+            pointsByClientId.refetch()
         }
-
-        if(!userData){
-            fetchData()
+        
+        if(!pointsByClientId.data){
+            setUserPoints(pointsByClientId.data.pointsByClientId.points)
         }
-
-   }) 
+   })
 
     return (
-        <div className={`${handles.container}`}>
-            <h1 className={`${handles.points}`}>{userData?.userId}</h1>
+        // <div className={`${handles.container}`}>
+        //     <h1 className={`${handles.points}`}>{userSessionData ? userPoints : "Faça login para visualizar sua pontuação"}</h1>
+        // </div>
+        <div>
+            {userPoints}
         </div>
     )
 }

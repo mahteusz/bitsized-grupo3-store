@@ -1,6 +1,7 @@
 {
   "store.home": {
     "blocks": [
+      "flex-layout.row#points-renderer",
       "info-card#use-seus-pontos",
       "__fold__",
       "flex-layout.row#shelf",
@@ -9,6 +10,18 @@
       "rich-text#link"
     ]
   },
+
+  "flex-layout.row#points-renderer": {
+    "props": {
+      "horizontalAlign":"center",
+      "paddingBottom":"4",
+      "paddingTop":"4"
+    },
+    "children": [
+      "points-renderer"
+    ]
+  },
+
   "info-card#use-seus-pontos": {
     "props": {
       "id": "info-card-usar-pontos",

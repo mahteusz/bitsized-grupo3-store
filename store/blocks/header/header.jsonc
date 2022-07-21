@@ -71,8 +71,10 @@
       "rich-text#points-title-login",
       "login",
       "minicart.v2"
+
     ]
   },
+
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
@@ -81,6 +83,7 @@
       "logo#desktop"
     ]
   },
+
   "flex-layout.col#category-menu": {
     "props": {
       "verticalAlign": "middle"
